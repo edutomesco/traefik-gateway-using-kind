@@ -1,4 +1,4 @@
-#⚙️ Traefik Kubernetes Quick Start on Kind with Localhost Exposure
+# ⚙️ Traefik Kubernetes Quick Start on Kind with Localhost Exposure
 
 This repository demonstrates a reliable method for implementing the official Traefik Kubernetes Quick Start Guide using a local kind (Kubernetes in Docker) cluster and the official Traefik Helm chart.
 
@@ -6,11 +6,11 @@ The core objective is to configure the setup to allow direct access to the Traef
 
 ---
 
-##🚀 Step-by-Step Execution
+## 🚀 Step-by-Step Execution
 
 Follow these commands in order to set up the cluster and deploy Traefik.
 
-###Step 1: Create the Kind Cluster
+### Step 1: Create the Kind Cluster
 
 Use the configuration file to create the cluster with the port mapping enabled.
 
@@ -18,7 +18,7 @@ Use the configuration file to create the cluster with the port mapping enabled.
 kind create cluster --config kind-config.yaml
 ```
 
-###Step 2: Deploy Traefik via Helm
+### Step 2: Deploy Traefik via Helm
 
 Ensure you have added the Traefik repository before installing the chart with the custom values.
 
@@ -33,7 +33,7 @@ helm repo update
 helm install traefik traefik/traefik -f traefik-values.yaml
 ```
 
-###Step 3: Verify Localhost Access
+### Step 3: Verify Localhost Access
 
 Wait a moment for the Traefik deployment to become ready. Once ready, the dashboard should be accessible directly via localhost on port 80.
 
