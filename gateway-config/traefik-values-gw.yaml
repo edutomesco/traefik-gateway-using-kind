@@ -1,0 +1,32 @@
+ports:
+  web:
+    nodePort: 30000
+
+api:
+  dashboard: true
+  insecure: true
+
+ingressRoute:
+  dashboard:
+    enabled: true
+    entryPoints:
+      - web
+
+providers:
+  kubernetesGateway:
+    enabled: true
+
+gateway:
+  listeners:
+    web:
+      namespacePolicy:
+        from: All
+
+service:
+  type: NodePort
+
+logs:
+  general:
+    level: INFO
+  access:
+    enabled: true
